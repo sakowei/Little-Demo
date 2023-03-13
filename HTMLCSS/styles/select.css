@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {background-color: #e3f2fd;}
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 80px auto 30px;
+}
+
+.select-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+} 
+
+.select-btn .btn-text {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+
+.select-btn .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #6e93f7;
+  font-size: 14px;
+  color: #fff;
+  transition: .3s;
+}
+
+.select-btn.open ~ .lists {display: block;}
+ 
+.select-btn.open .arrow {transform: rotate(-180deg);}
+
+.lists {
+  position: relative;
+  display: none;
+  margin-top: 15px;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  list-style: none;
+}
+
+.lists .item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.lists .item:hover {background-color: #e7edfe;}
+
+.item .item-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.item .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border: 1.5px solid #c0c0c0;
+  border-radius: 4px;
+  transition: all .3s ease-in-out;
+}
+
+.item.checked .checkbox {
+  background-color: #4070f4;
+  border-color: #4070f4;
+}
+
+.checkbox .check {
+  color: #fff;
+  font-size: 11px;
+  transform: scale(0);
+  transition: all .2s ease-in-out;
+}
+
+.item.checked .check {transform: scale(1);}
