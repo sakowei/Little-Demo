@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>背景渐变动画</title>
+  <style>
+    * {margin: 0;padding: 0;box-sizing: border-box;}
+    @keyframes gradient-moving {
+      from {background-position: 0 0;}
+      to {background-position: 100% 100%;} 
+    }
+    body {
+      width: 100dvw;
+      height: 100dvh;
+      background: linear-gradient(
+        135deg,
+        hsl(170deg, 80%, 70%),
+        hsl(190deg, 80%, 70%),
+        hsl(250deg, 80%, 70%),
+        hsl(320deg, 80%, 70%)
+      );
+      background-size: 200% 200%;
+      animation: gradient-moving 15s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>6位验证码</title>
+  <link rel="stylesheet" href="styles/verify.css">
+</head>
+<body>
+  <div class="app">
+    <h2>Verify Your Account</h2>
+    <p>
+      We emailed you the six digit code to cool_guy@email.com<br>
+Enter the code below to confirm your email address.
+    </p>
+
+    <div class="number-box">
+      <div class="num"></div>
+      <div class="num"></div>
+      <div class="num"></div>
+      <div class="num"></div>
+      <div class="num"></div>
+      <div class="num"></div>
+      <input type="text" class="input" maxlength="6">
+    </div>
+
+    <small class="info">
+      This is design only. We didn't actually send you an email as we don't have your email, right?
+    </small>
+  </div>
+</body>
+<script src="scripts/verify.js"></script>
+</html>

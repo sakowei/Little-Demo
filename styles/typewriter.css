@@ -1,0 +1,31 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "huxiaobo-gdh1e91397a5f211c5", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: #2f3542;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #f1f2f6;
+}
+
+@keyframes blink {
+  from, to {border-color: transparent;}
+  50% {border-color: #fff;}
+}
+
+span.stick {
+  border-right: 2px solid #fff;
+  animation: blink .6s step-end infinite;
+}
